@@ -1,0 +1,12 @@
+.home {
+    display: flex;
+  }
+  
+  .home-container {
+    background-color: aliceblue;
+    flex: 1;
+    display: flex;
+    padding-left: 16%;
+    min-height: 100vh;
+  }
+  

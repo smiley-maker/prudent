@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;700;800&display=swap');
+
+
+.App {
+    margin: 0;
+    padding: 0;
+}
+
+body, * {
+    margin: 0;
+    padding: 0;
+}
+/* Login Page */
+
+.login-page, .register-page, add-conference {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 15px;
+    padding: 4px;
+    justify-content: space-between;
+}
+
+.relatedDates {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+    padding: 40px;
+}
+
+.login-input {
+    width: 350px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    border: 1px solid rgb(199, 199, 209);
+}
+
+.login-button {
+    background-color: azure;
+    padding: 10px 15px;
+    border-radius: 100px;
+    font-family: "Karla", sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Todos */
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+
+.indicator {
+    margin-right: 10px;
+}
+
+
+
+.todotext {
+    font-size: 1.2rem;
+    font-family: "Karla", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.todotext .complete {
+    text-decoration: line-through !important;
+}
+
+.todotext .overdue {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Todo Card */
+
+.todo-card {
+    background-color: #232241;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-around;
+    color: white;
+}
+
+/* Conferences */
+
+.conference-card {
+    background-color: #18172E;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 5 5 25 rgba(0,0,0,0.25), 2 2 5 rgba(255, 255, 255, 0.1), -2 -2 5 rgba(0,0,0,0.15), 1 1 5 #18172e11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}

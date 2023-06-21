@@ -1,0 +1,23 @@
+.todo {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: #18172E;
+    border-radius: 100px;
+    align-items: center;
+
+    .indicator {
+        margin-left: 10px;
+        background-color: #4707FF;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+    }
+
+    .todotext {
+        font-size: 1.2rem;
+        font-family: "Karla", sans-serif;
+    }
+
+
+}

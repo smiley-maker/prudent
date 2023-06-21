@@ -1,0 +1,13 @@
+.profile-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px #4507ff31;
+    border: 1px solid white;
+}
+
+h2 {
+    color: white;
+    max-width: 90%;
+    text-align: center;
+}
