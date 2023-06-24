@@ -39,8 +39,8 @@ function UserCard() {
     <div className='user-card'>
       {userInfo && (
         <>
-          <h3>{userInfo.name}</h3>
           <img src={userInfo.img} alt={userInfo.name} className="profile-img" />
+          <h3 className='user-name'>{userInfo.name}</h3>
           <Logout />
 
           {/* Render the user profile picture or other information */}

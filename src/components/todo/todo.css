@@ -1,0 +1,38 @@
+
+.todo {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 15px;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    background-color: var(--main-accent-color);
+    border: none;
+    outline: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.indicator {
+    margin-right: 10px;
+}
+
+
+
+.todotext {
+    font-size: 1.2rem;
+    font-family: "Karla", sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.todotext .complete {
+    text-decoration: line-through !important;
+}
+
+.todotext .overdue {
+    text-decoration: underline;
+    font-weight: bold;
+}

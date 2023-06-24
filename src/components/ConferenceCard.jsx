@@ -3,7 +3,7 @@ import React from 'react'
 function ConferenceCard(props) {
   return (
     <div className="conference-card">
-        <h4>{props.acronym}</h4>
+        <h6>{props.acronym}</h6>
         <p>{props.dateRange}</p>
     </div>
   )

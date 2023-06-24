@@ -5,12 +5,14 @@ import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import * as AiIcons from "react-icons/ai"
 import UserCard from '../UserCard/UserCard';
+import Logo from "../../images/cc logo.svg";
 
 function Sidebar() {
   return (
     <div className='sidebar-container'>
 
       <nav className='nav-menu'>
+        <img src={Logo} alt="conference collective logo" className="logo" />
         <ul className="nav-menu-items">
           <li className="navbar-link">
             <Link to="/">
