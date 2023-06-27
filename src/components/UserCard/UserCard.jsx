@@ -32,7 +32,7 @@ function UserCard() {
       setUserInfo(userData);
     };
 
-    fetchUserData();
+    fetchUserData(); 
   }, [currentUser]);
 
   return (
@@ -40,7 +40,7 @@ function UserCard() {
       {userInfo && (
         <>
           <img src={userInfo.img} alt={userInfo.name} className="profile-img" />
-          <h3 className='user-name'>{userInfo.name}</h3>
+          <p className='user-name copy-sm'>{userInfo.name}</p>
           <Logout />
 
           {/* Render the user profile picture or other information */}

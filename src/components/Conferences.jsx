@@ -16,14 +16,17 @@ function Conferences() {
     }, [currentUser]);
 
     return (
-    <div className='card-wrapper'>
-        <h4>your conferences</h4>
-        {confs.map((conf) => {
-            const dateRange = conf.conferenceStartingDate + "---" + conf.conferenceEndingDate;
-//            const dateRange = `${conf.conferenceStartingDate.toDate().toDateString()} --- ${conf.conferenceEndingDate.toDate().toDateString()}`;
-            return (
-            <ConferenceCard key={conf.timestamp} acronym={conf.conferenceName} dateRange={dateRange}  />
-        )})}
+    <div className='todo-card'>
+        <h7>your conferences</h7>
+        <div className="conf-grid">
+            {confs.map((conf) => {
+                const dateRange = conf.conferenceStartingDate + "---" + conf.conferenceEndingDate;
+    //            const dateRange = `${conf.conferenceStartingDate.toDate().toDateString()} --- ${conf.conferenceEndingDate.toDate().toDateString()}`;
+                return (
+                    <ConferenceCard key={conf.timestamp} acronym={conf.acronym} dateRange={dateRange}  />
+            )})}
+        </div>
+
     </div>
   )
 }

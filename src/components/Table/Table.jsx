@@ -1,4 +1,4 @@
-import { collection, onSnapshot, addDoc, serverTimestamp, doc, getDoc } from 'firebase/firestore';
+import { collection, onSnapshot, addDoc, serverTimestamp, doc, getDoc, query, where, getDocs } from 'firebase/firestore';
 import React, { useEffect, useState, useContext, useMemo } from 'react';
 import { AuthContext } from '../../context/AuthContext';
 import { useTable } from 'react-table';
@@ -26,6 +26,7 @@ function Table() {
     ],
     []
   );
+  
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, 'conferences'), (snapshot) => {
@@ -52,32 +53,37 @@ function Table() {
   const addFav = async (conferenceId) => {
     const userRef = doc(db, 'users', currentUser.uid);
     const favoritesRef = collection(userRef, 'favorites');
-
+  
     try {
       // Check if the conference is already added to favorites
-      const favoriteSnapshot = await getDoc(doc(favoritesRef, conferenceId));
-      if (favoriteSnapshot.exists()) {
+      const favoriteQuery = query(favoritesRef, where('conferenceId', '==', conferenceId));
+      const favoriteSnapshot = await getDocs(favoriteQuery);
+  
+      if (!favoriteSnapshot.empty) {
         console.log('Conference already added to favorites.');
-        alert("That conference is already in your favorites. ")
+        alert("That conference is already in your favorites.");
         return;
       }
-
+  
       // Get the conference details
       const conference = data[conferenceId];
-
+  
       // Add the conference to favorites
       await addDoc(favoritesRef, {
+        conferenceId: conferenceId,
         conferenceName: conference.conferenceName,
+        acronym: conference.acronym,
         conferenceStartingDate: conference.conferenceStartingDate,
         conferenceEndingDate: conference.conferenceEndingDate,
         createdAt: serverTimestamp(),
       });
-
+  
       console.log('Conference added to favorites:', conference);
     } catch (error) {
       console.error('Error adding conference to favorites:', error);
     }
   };
+  
 
 
   return (

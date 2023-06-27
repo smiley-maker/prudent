@@ -11,6 +11,7 @@ import Conferences from './components/Conferences';
 import Table from './components/Table/Table';
 import AddConference from './pages/AddConference';
 import Sidebar from './components/Sidebar/Sidebar';
+import NewTable from './components/newTable/NewTable';
 
 function App() {
 
@@ -31,7 +32,7 @@ function App() {
           <Route path='/todos' element={<TodoCard/>}/>
           <Route path="/addconf" element={<AddConference />}/>
           <Route path="/favorites" element={<Conferences />} />
-          <Route path="/allConfs" element={<Table />} />
+          <Route path="/allConfs" element={<NewTable />} />
           <Route path="/newtodo" element={<AddTodoForm />}/>
           <Route path='/' element={
             <RequireAuth>

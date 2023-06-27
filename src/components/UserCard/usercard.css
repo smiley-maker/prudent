@@ -1,22 +1,22 @@
 .profile-img {
-    height: 100px;
-    width: 100px;
+    height: 5rem;
+    width: 5rem;
     border-radius: 50%;
-    box-shadow: 5px 5px 10px #4507ff31;
-    border: 2px solid white;
+    border: 0.0625rem solid var(--secondary-accent, #CFCFFF);
+    box-shadow: 0rem 0rem 1.25rem 0rem rgba(192, 192, 255, 0.40);
 }
 
 .user-name {
-    color: white;
-    max-width: 90%;
+    color: var(--lighter, #FFF);    
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
+    min-width: 90%;
 }
 
 .user-card {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    row-gap: 10px;
+    row-gap: 1rem;
     align-items: center;
     justify-content: center;
-}
+} 

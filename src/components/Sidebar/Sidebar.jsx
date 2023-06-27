@@ -5,7 +5,7 @@ import * as FaIcons from "react-icons/fa";
 import * as MdIcons from "react-icons/md";
 import * as AiIcons from "react-icons/ai"
 import UserCard from '../UserCard/UserCard';
-import Logo from "../../images/cc logo.svg";
+import Logo from "../../images/conf logo.svg";
 
 function Sidebar() {
   return (
@@ -17,25 +17,21 @@ function Sidebar() {
           <li className="navbar-link">
             <Link to="/">
               <MdIcons.MdSpaceDashboard className='icon' />
-              <span className='nav-text'>dashboard</span>
             </Link>
           </li>
           <li className="navbar-link">
             <Link to="/todos">
               <AiIcons.AiFillCheckCircle className='icon' />
-              <span className='nav-text'>todo</span>
             </Link>
           </li>
           <li className="navbar-link">
             <Link to="/allConfs">
               <MdIcons.MdSchool className='icon'/>
-              <span className='nav-text'>conferences</span>
             </Link>
           </li>
           <li className="navbar-link">
             <Link to="/favorites">
               <MdIcons.MdFavorite className='icon' />
-              <span className="nav-text">favorites</span>
             </Link>
           </li>
         </ul>

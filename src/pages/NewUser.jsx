@@ -81,15 +81,9 @@ function NewUser() {
 
     return (
         <div className="register-page">
-            <h1 className="new-heading">Welcome!</h1>
-            <h3 className="new-h3">Please fill out the form below to get started!</h3>
+            <h1 className='w-40 text-centered'>Hi! Welcome to the Conference Collective!</h1>
+            <h5>Sign up below to get started!</h5>
             <form className="login-form" onSubmit={handleAdd}>
-                <div className="form-group">
-                    <label htmlFor='file'>
-                        Image: <DriveFolderUploadOutlinedIcon />
-                    </label>
-                    <input type='file' id="file" onChange={(e) => setFile(e.target.files[0])} style={{ display: 'none' }} />
-                </div>
                 {userInputs.map((uinput) => (
                     <input
                         id={uinput.id}
@@ -100,12 +94,19 @@ function NewUser() {
                         key={uinput.id} // Don't forget to add a unique key for each element in the map loop
                     />
                 ))}
+                <div className="form-group">
+                    <label htmlFor='file' className='copy-lg bold text-center'>
+                        <DriveFolderUploadOutlinedIcon /> Upload a profile image...
+                    </label>
+                    <input type='file' id="file" onChange={(e) => setFile(e.target.files[0])} style={{ display: 'none' }} />
+                </div>
 
-                <button disabled={per != null && per < 100} type="submit" className="login-button">
+                <button disabled={per != null && per < 100} type="submit" className="logout">
                     Sign Up!
                 </button>
             </form>
-            <Link to="/login"><p className="switchpage">Already have an account? Click here to login!</p></Link>
+            <hr className='divider'/>
+            <Link to="/login"><p className="switchpage">already have an account? <em>login now!</em></p></Link>
         </div>
     )
 }

@@ -2,37 +2,42 @@
 .todo {
     display: flex;
     flex-direction: row;
-    padding: 8px 15px;
-    border-radius: 100px;
+    padding: 0.5rem 1rem;
+    border-radius: 9rem;
     align-items: center;
     justify-content: flex-start;
-    margin-bottom: 20px;
-    background-color: var(--main-accent-color);
-    border: none;
+    margin-bottom: 1.25rem;
+    border: none; 
     outline: none;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0.0625rem 0.0625rem 0.625rem 0rem rgba(0, 0, 0, 0.10);
+    
 }
 
 
 .indicator {
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
+.indicator .todo {
+    border-radius: 1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background: var(--primary-accent, #4707FF);
+    outline: none;
+    border: none;
+}
 
+.indicator .doing, .indicator .complete {
+    background: var(--secondary-accent, #CFCFFF);
+}
 
 .todotext {
-    font-size: 1.2rem;
-    font-family: "Karla", sans-serif;
-    color: white;
+    color: var(--light, #F7F7F9);
     margin: 0;
     padding: 0;
 }
 
 .todotext .complete {
+    color: var(--main-accent-color);
     text-decoration: line-through !important;
-}
-
-.todotext .overdue {
-    text-decoration: underline;
-    font-weight: bold;
 }

@@ -38,13 +38,16 @@ function Login() {
 
     return (
         <div className="login-page">
+            <h1>Hello, welcome back!</h1>
+            <p className='copy-lg'>Login to resume your conference planning journey (:</p>
             <form className="login-form" onSubmit={handleLogin}>
                 <input type="email" required placeholder='enter your email...' className="login-input" onChange={(e) => setEmail(e.target.value)} />
-                <input type="password" required placeholder='and password' className="login-input" onChange={(e) => setPassword(e.target.value)} />
-                <button className="login-button" type='submit'>login</button>
+                <input type="password" required placeholder='& password...' className="login-input" onChange={(e) => setPassword(e.target.value)} />
+                <button className="logout" type='submit'>sign in</button>
                 {error && <span className="error-message">Wrong email or password.</span>}
             </form>
-            <Link to="/register"><p className="switchpage">Don't have an account? Click here to register!</p></Link>
+            <hr className='divider'/>
+            <Link to="/register"><p className="switchpage copy-reg">Don't have an account? <em>register here!</em></p></Link>
 
         </div>
     )

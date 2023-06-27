@@ -45,7 +45,7 @@ function AddTodoForm() {
         value={todoText}
         onChange={handleInputChange}
       />
-      <button type="submit">Add Todo</button>
+      <button className='logout' type="submit">Add Todo</button>
     </form>
   );
 }

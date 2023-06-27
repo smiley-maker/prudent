@@ -12,6 +12,8 @@
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^9.22.2",
     "react": "^18.2.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-data-table-component": "^7.5.3",
     "react-dom": "^18.2.0",
     "react-icons": "^4.9.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",
@@ -19,6 +21,7 @@
     "react-scripts": "5.0.1",
     "react-table": "^7.8.0",
     "scss": "^0.2.4",
+    "styled-components": "^5.3.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
